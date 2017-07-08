@@ -110,6 +110,7 @@
 						&nbsp;
 					</ul>
 					<ol class="column column-8">
+						<li class="fragment">Big Picture</li>
 						<li class="fragment">Why JavaScript?</li>
 						<li class="fragment">State of JavaScript</li>
 						<li class="fragment">State of Ecosystem</li>
@@ -120,16 +121,19 @@
 
 				<aside class="notes">
 					<p>
-						Going to be a roller coaster of sorts. It will be an emotional journey, but a journey which ends on a positive note and leaves you feeling good about the future! So bear with me. :)
+						Going to be a roller coaster of sorts. An emotional journey with highs and lows, some more lows, and even lower lows, but a journey which ends on a positive note and leaves you feeling good about the future! So bear with me. :)
 					</p>
 					<p>
-						First, I am going to motivate why you should care about numeric computing in JavaScript. :)
+						First, I will talk about the big picture and why this point in time is special.
 					</p>
 					<p>
-						Next, I'll talk about the State of Math in JavaScript. :(
+						Next, I am going to motivate why you should care about numeric computing in JavaScript. :)
 					</p>
 					<p>
-						Then, I'll discuss the JavaScript numeric computing ecosystem. :|
+						Then, I'll talk about the State of Math in JavaScript. :(
+					</p>
+					<p>
+						Next, I'll discuss the JavaScript numeric computing ecosystem. :|
 					</p>
 					<p>
 						I'll follow by talking about a project in which I am involved which seeks to drive the conversation forward. :)
@@ -141,11 +145,110 @@
 			</section>
 
 			<section class="center" data-transition="slide-in fade-out" data-transition-speed="fast">
+				<h2 class="no-text-transform">Big Picture</h2>
+
+				<aside class="notes">
+					<p>
+						The BIG picture.
+					</p>
+					<p>
+						I see five trends.
+					</p>
+				</aside>
+			</section>
+
+			<section class="center" data-transition="slide-in fade-out" data-transition-speed="fast">
+				<h2 class="no-text-transform">1. Edge Computing</h2>
+
+				<aside class="notes">
+					<p>
+						First, more and more computing will move to the web with browsers providing the primary runtime engine. The drivers are twofold:
+					</p>
+					<ul>
+						<li>
+							Developers will get wise to the fact that a user's local compute resources are often underutilized.
+						</li>
+						<li>
+							Developers will continue to want to build bigger and more powerful (native-like) applications where network latency and offline access are considered critical.
+						</li>
+					</ul>
+				</aside>
+			</section>
+
+			<section class="center" data-transition="slide-in fade-out" data-transition-speed="fast">
+				<h2 class="no-text-transform">2. Browser Virtual Machine</h2>
+
+				<aside class="notes">
+					<p>
+						Second, browser engines will continue to expand their role as process virtual machines, providing the ability to run computer programs in a platform independent manner with near-native performance.
+					</p>
+					<p>
+						With WebAssembly, browser engines move a step closer to fulfilling the promise of the JVM: an efficient compile-to target with a single runtime.
+					</p>
+				</aside>
+			</section>
+
+			<section class="center" data-transition="slide-in fade-out" data-transition-speed="fast">
+				<h2 class="no-text-transform">3. Modularity</h2>
+
+				<aside class="notes">
+					<p>
+						JavaScript's evolution is guided by a set of constraints which are unique among the thousands of programming languages which exist today. While each constraint considered in isolation may find parallels in any number of languages, it is their amalgamation which sets JavaScript apart.
+					</p>
+					<p>
+						One of those constraints is need for radical modularity: the ability to send exactly what is needed when it is needed. We see this in the past with UMD/AMD/CommonJS module loading specifications and module loaders (like RequireJS) and, now, in the modern day, in the form of bundlers (like browserify, Webpack, and rollup) and the ongoing standards work around JavaScript imports.
+					</p>
+					<p>
+						All of this history and continued work is centered around how we can efficiently organize, transform, and shape our code at the speed of thought. We are forced to embrace patterns and code principles which may be possible, but are not existential in other languages.
+					</p>
+					<p>
+						In short, in their current form, other programming languages are ill-suited for the web, as a platform.
+					</p>
+					<p>
+						To take an example from numeric computing, even if, say, Julia (and I use Julia because I have seen chatter in their message boards) could "compile" to run in a web browser, they would need to provide a means for decoupling much of their codebase, as well as provide reference implementations for all of BLAS, LAPACK, and other vendor dependencies which are hardware optimized. While not impossible, such an effort would entail considerable work with dubious upside, especially for a group of developers where the web as a platform is outside of their domain of expertise.
+					</p>
+				</aside>
+			</section>
+
+			<section class="center" data-transition="slide-in fade-out" data-transition-speed="fast">
+				<h2 class="no-text-transform">4. Artificial Intelligence</h2>
+
+				<aside class="notes">
+					<p>
+						The deluge of data, the ascent of data science as an overarching discipline, and the rise of artificial intelligence as a pervasive technology are coalescing to drive technological advances and innovation. Couple these advances with new web APIs and capabilities and you have a fertile playground for creating new types of applications and experiences. Whether that is combining the browser camera API with computer vision to generate quotes for movers or leveraging WebGL to create CAD-like applications or using local storage to create a virtual filesystem for data analysis and offline access.
+					</p>
+					<p>
+						The principle driver behind the rise of artificial intelligence is automation. And the driver for automation is scale. Developers, and the companies they work for, will continue to seek increases in operational efficiency and volume. As part of their efforts, the more performant their applications, the more tailored the consumer experience, and the more intelligent their technology, the more value they will capture and the faster they will grow.
+					</p>
+				</aside>
+			</section>
+
+			<section class="center" data-transition="slide-in fade-out" data-transition-speed="fast">
+				<h2 class="no-text-transform">5. Community</h2>
+
+				<aside class="notes">
+					<p>
+						While I may be biased, the energy, tenacity, and scale of the JavaScript community cannot be matched, and its growth shows no sign of slowing down. As more people are pulled into the web platform and as more verticals are captured, the community's growth will only accelerate.
+					</p>
+				</aside>
+			</section>
+
+			<section class="center" data-transition="slide-in fade-out" data-transition-speed="fast">
+				<h2 class="no-text-transform">Always Bet on JavaScript</h2>
+
+				<aside class="notes">
+					<p>
+						In the words of Brendan Eich, always bet on JS.
+					</p>
+				</aside>
+			</section>
+
+			<section class="center" data-transition="slide-in fade-out" data-transition-speed="fast">
 				<h2 class="no-text-transform">JavaScript</h2>
 
 				<aside class="notes">
 					<p>
-						First, let's talk about JavaScript.
+						Let's talk about JavaScript.
 					</p>
 				</aside>
 			</section>
@@ -164,7 +267,10 @@
 						JavaScript is THE language of the web, whether you like it or not.
 					</p>
 					<p>
-						Depending on your bent, it has flaws (cue example flaw) and, depending on your bent, it has positive qualities (cue example trait).
+						JavaScript has pros and cons, just as does every language. But while much maligned, JavaScript is a survivor. Time and time again pundits have prognosticated the death of JavaScript (Java, CoffeeScript, Dart, LiveScript, TypeScript, and now WebAssembly), and, yet, JavaScript continues to live. Given its burgeoning community, importance on the web, and its steady path to global domination, JavaScript seems to get stronger with time. Each time JavaScript detractors have sounded the death knell, they have been wrong.
+					</p>
+					<p>
+						Yet, despite JavaScript's upward trajectory, the language has yet to make inroads in numeric computing, machine learning, and more generally data science.
 					</p>
 				</aside>
 			</section>
