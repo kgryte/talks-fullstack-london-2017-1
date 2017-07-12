@@ -365,7 +365,7 @@
 				</aside>
 			</section>
 
-			<section class="center" data-transition="slide-in fade-out">
+			<section class="center" data-transition="slide-in slide-out">
 
 				<ul>
 					<li class="fragment">Dynamically compiled</li>
@@ -397,6 +397,60 @@
 							Perf: R is notoriously "slow" (slow being a relative term); JavaScript is faster (cue a couple benchmarks)
 						</li>
 					</ul>
+				</aside>
+			</section>
+
+			<section class="center" data-transition="slide-in slide-out" data-transition-speed="default">
+				<table>
+					<thead>
+						<tr>
+							<th></th>
+							<th>C</th>
+							<th>R</th>
+							<th>Python</th>
+							<th>JavaScript</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>sin</td>
+							<td>35054483</td>
+							<td>281001</td>
+							<td>5838843</td>
+							<td>9598538</td>
+						</tr>
+						<tr>
+							<td>expm1</td>
+							<td>40191109</td>
+							<td>274317</td>
+							<td>6161389</td>
+							<td>9139959</td>
+						</tr>
+						<tr>
+							<td>erf</td>
+							<td>77101176</td>
+							<td>170354</td>
+							<td>4824532</td>
+							<td>10463968</td>
+						</tr>
+					</tbody>
+				</table>
+				<aside class="notes">
+					<p>
+						Just to put performance in context, here are cross-language benchmarks...
+					</p>
+					<p>
+						Here are benchmarks for three functions. The first two are standard math library functions across four languages: C, R, Python, and JavaScript.
+					</p>
+					<p>
+						The C benchmarks are the baseline. In general, C is roughly 5-10x faster than JavaScript. JavaScript is between 2-5x faster than Python. And JavaScript is between 10-100x faster than R.
+					</p>
+					<p>
+						Note that the last function, the error function, is implemented in pure vanilla JavaScript. Meaning, we are not calling down to a system library. And even in JavaScript, this function is 2x faster than Python.
+					</p>
+					<p>
+						Now, I cannot confirm that this is generally true, but...it is illustrative that the notion that JavaScript is "slow" is nonsense. You can write fast JavaScript so long as you know what you are doing. :)
+					</p>
 				</aside>
 			</section>
 
